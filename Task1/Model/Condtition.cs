@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Task1.Model
 {
-    public class Condtition
+    public class Condtition : BaseCondition
     {
         public int Number { get; set; }
         public Condtition()
+        {
+
+        }
+        public override void ComparisonNumber(int Number)
         {
             if (Number % 3 == 0)
             {
@@ -24,17 +28,13 @@ namespace Task1.Model
                 Console.WriteLine("FooBar");
             }
         }
-        public virtual void ComparisonNumbers(int Number)
-        {
-
-        }
 
     }
 
 
-    public class CondtitionPart2: Condtition
+    public class CondtitionPart2: BaseCondition
     {
-        public override void ComparisonNumbers(int Number)
+        public override void ComparisonNumber(int Number)
         {
             if (Number % 7 == 0 && Number % 3 == 0)
             {
