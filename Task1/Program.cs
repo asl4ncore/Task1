@@ -13,8 +13,13 @@ namespace Task1
         {
             Console.Write("Введите число:");
             int number = Convert.ToInt32(Console.ReadLine());
+
             RunCondition runCondition = new RunCondition();
-            runCondition.ComparisonNumber(number);
+
+            runCondition.Condtition = new Condtition();
+            runCondition.Run(number);
+            runCondition.Condtition = new CondtitionPart2();
+            runCondition.Run(number);
 
             Console.ReadKey();
         }

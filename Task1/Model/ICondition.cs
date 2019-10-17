@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task1.Model
 {
-    public abstract class BaseCondition
+    public interface ICondition
     {
-        public abstract void ComparisonNumber(int Number);
+        void ComparisonNumber(int Number);
     }
 }

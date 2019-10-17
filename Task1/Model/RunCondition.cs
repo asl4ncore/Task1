@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Task1.Model
 {
-    public class RunCondition : BaseCondition
+    public class RunCondition 
     {
-        private Condtition condtition = new Condtition();
-        private CondtitionPart2 CondtitionPart2 = new CondtitionPart2();
+        public ICondition Condtition { get; set; }
 
-        public override void ComparisonNumber(int Number)
+        public void Run(int Number)
         {
-            if (Number > 0)
+            if (Number != 0)
             {
-                condtition.ComparisonNumber(Number);
-                CondtitionPart2.ComparisonNumber(Number);
-            }            
+                Condtition.ComparisonNumber(Number);
+            }
         }
 
     }
