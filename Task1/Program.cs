@@ -14,12 +14,8 @@ namespace Task1
             Console.Write("Введите число:");
             int number = Convert.ToInt32(Console.ReadLine());
 
-            RunCondition runCondition = new RunCondition();
-
-            runCondition.Condtition = new Condtition();
-            runCondition.Run(number);
-            runCondition.Condtition = new CondtitionPart2();
-            runCondition.Run(number);
+            CondtitionPart2 runCondition = new CondtitionPart2();
+            runCondition.ComparisonNumber(number);
 
             Console.ReadKey();
         }
